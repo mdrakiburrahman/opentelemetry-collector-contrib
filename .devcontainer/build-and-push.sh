@@ -21,3 +21,4 @@ make docker-otelcontribcol
 # Tag and push
 docker tag otelcontribcol:latest mdrrakiburrahman/opentelemetry-collector-contrib-dev:latest
 docker push mdrrakiburrahman/opentelemetry-collector-contrib-dev:latest
+# https://hub.docker.com/repository/docker/mdrrakiburrahman/opentelemetry-collector-contrib-dev
