@@ -238,10 +238,12 @@ run:
 
 .PHONY: docker-component # Not intended to be used directly
 docker-component: check-component
+	@echo "BEGIN DOCKER BUILD..."
 	GOOS=linux GOARCH=amd64 $(MAKE) $(COMPONENT)
 	cp ./bin/$(COMPONENT)_linux_amd64 ./cmd/$(COMPONENT)/$(COMPONENT)
 	docker build -t $(COMPONENT) ./cmd/$(COMPONENT)/
 	rm ./cmd/$(COMPONENT)/$(COMPONENT)
+	@echo "...DONE!"
 
 .PHONY: check-component
 check-component:
