@@ -1,5 +1,8 @@
 cd /workspaces/opentelemetry-collector-contrib
 
+rm -rf bin
+rm -rf dist
+
 mkdir bin/ dist/
 
 # Install dependencies - takes a while! Run if things start to cry about Go modules
